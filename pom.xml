@@ -10,12 +10,14 @@
     <packaging>jar</packaging>
     <url>http://maven.apache.org</url>
 
-    <parent>
-        <groupId>com.baeldung</groupId>
-        <artifactId>parent-java</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../../parent-java</relativePath>
-    </parent>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.release.version>11</maven.release.version>
+        <sirix-core.version>0.9.3</sirix-core.version>
+        <compiler.plugin.version>3.8.0</compiler.plugin.version>
+        <asm.version>6.1</asm.version>
+    </properties>
 
     <dependencies>
         <dependency>
@@ -39,19 +41,12 @@
                     <dependency>
                         <groupId>org.ow2.asm</groupId>
                         <artifactId>asm</artifactId>
-                        <version>${asm.version}</version> <!-- Use newer version of ASM -->
+                        <version>${asm.version}</version>
                     </dependency>
                 </dependencies>
             </plugin>
         </plugins>
     </build>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.release.version>11</maven.release.version>
-        <sirix-core.version>0.9.3</sirix-core.version>
-        <compiler.plugin.version>3.8.0</compiler.plugin.version>
-        <asm.version>6.1</asm.version>
-    </properties>
 
 </project>
